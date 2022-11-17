@@ -1,0 +1,35 @@
+sam local start-api --env-vars env.json 
+curl --location --request POST 'http://localhost:3000' --header 'Content-Type: text/plain' \
+--data-raw '{
+    "bookingID" : 22,
+    "car" : "BMW"
+}'
+OR 
+use postman to send request
+
+
+curl --location --request POST 'http://localhost:3000' --header 'Content-Type: text/plain' 
+    --data-raw '{
+        "bookingID" : 22,
+        "car" : "BMW"
+}'
+sam local invoke "HelloWorldFunction" -e events/event.json
+
+curl -v -X POST \
+  'https://r275xc9bmd.execute-api.us-east-1.amazonaws.com/test/helloworld?name=John&city=Seattle' \
+  -H 'content-type: application/json' \
+  -H 'day: Thursday' \
+  -d '{ "time": "evening" }'
+
+
+curl -v -X POST \
+  'http://localhost:3000' \
+  -H 'content-type: application/json' \
+  -H 'day: Thursday' \
+  -d '{ "bookingID": 021, "car" : "Ford" }'
+
+curl -X GET \
+  'https://r275xc9bmd.execute-api.us-east-1.amazonaws.com/test/helloworld?name=John&city=Seattle' \
+  -H 'content-type: application/json' \
+  -H 'day: Thursday'
+
