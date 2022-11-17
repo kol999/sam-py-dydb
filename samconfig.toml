@@ -1,0 +1,11 @@
+version = 0.1
+[test]
+[test.deploy]
+[test.deploy.parameters]
+stack_name = "sam-py-dynamodb"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1cqjk19lc4mgd"
+s3_prefix = "sam-py-dynamodb"
+region = "eu-west-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+parameter_overrides = 'ParameterKey=AWSENV,ParameterValue=AWS'

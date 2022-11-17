@@ -4,6 +4,21 @@ curl --location --request POST 'http://localhost:3000' --header 'Content-Type: t
     "bookingID" : 22,
     "car" : "BMW"
 }'
+
+curl -d "@data.txt" -X POST http://localhost:3000/data
+
+data.txt
+{
+	"bookingID" : 33972,
+  "car" : "Toyota",
+	"startDate" : "2023-05-01", 
+	"endDate" : "2023-05-10", 
+	"status" : "PAID"
+}  
+
+
+
+
 OR 
 use postman to send request
 

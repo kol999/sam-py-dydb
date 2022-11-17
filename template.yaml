@@ -1,6 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Serverless patterns - Amazon API Gateway to AWS Lambda to Amazon DynamoDB
+
 Globals:
   Function:
     Timeout: 30
@@ -20,6 +21,7 @@ Resources:
       Environment:
         Variables:
           AWSENV: AWS
+          LocalHostIP: None 
       Policies:
         DynamoDBCrudPolicy:
           TableName: !Ref DynamoDBTable
